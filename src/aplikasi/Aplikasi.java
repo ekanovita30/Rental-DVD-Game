@@ -17,7 +17,8 @@ public class Aplikasi {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int pilih,daftar;
+        int pilih, daftar;
+
         System.out.println("\t  ----------------EAGLE ZONE RENTAL-------------------");
         System.out.println("PENYEWAAN DVD FILM , SERIAL DRAMA ASIA (KOREA, JEPANG DAN THAILAND) DAN GAME");
         System.out.println("============================================================================");
@@ -35,93 +36,82 @@ public class Aplikasi {
                 System.out.println("Harga untuk semua DVD Game adalah Rp 15.000,00");
                 System.out.println("Masukkan nomor pilihan : ");
                 daftar = input.nextInt();
-                
+
                 break;
             case 2:
                 daftarFilm();
-
                 break;
             case 3:
                 daftarDrama();
+
                 break;
         }
 
     }
 
-    public static void daftarFilm() {
-        System.out.println("Daftar DVD Film :");
-        System.out.println("\t+-----------------------------------------------+");
-        String[][] film = {{"\t|No.\t|", "\tJudul Film\t|", "Genre\t\t|"}, {"\t|1.\t|", "Avengers Invinity War\t|", "Action\t|"},
-        {"\t|2.\t|", "The Battleship Island\t|", "Action\t|"}, {"\t|3.\t|", "Twilight Bracking Down|", "Fantasy\t|"},
-        {"\t|4.\t|", "Spider-man Homecoming\t|", "Laga\t\t|"}, {"\t|5.\t|", "Train to Busan\t|", "Fantasy\t|"},
-        {"\t|6.\t|", "Pitch Perfect 3\t|", "Music\t\t|"}, {"\t|7.\t|", "Beauty and the Beast\t|", "Romance\t|"},
-        {"\t|8.\t|", "Star Wars\t\t|", "Action\t|"}, {"\t|9.\t|", "Black Panther\t\t|", "Action\t|"},
-        {"\t|10.\t|", "Maddah Danur 2\t|", "Horror\t|"}, {"\t|11.\t|", "Incidius 3\t\t|", "Horror\t|"}
-
-        };
-        for (int i = 0; i < film.length; i++) {
-            for (int j = 0; j < film[0].length; j++) {
-                if (i == 0 && j == 2) {
-                    System.out.println(film[i][j] + " ");
-                    System.out.println("\t+-----------------------------------------------+");
-                } else {
-                    System.out.print(film[i][j] + " ");
-                }
-
-            }
-            System.out.println(" ");
-        }
-        System.out.println("\t+-----------------------------------------------+");
-    }
-
     public static void daftarGame() {
+        String[][] game = {
+            {"1", "God of War"}, {"2", "Resident Evil 5"},
+            {"3", "FIFA Soccer"}, {"4", "DiRT"},
+            {"5", "Assassin’s"}, {"6", "Need for Speed"},
+            {"7", "Call of Duty"}, {"8", "Grand Theft Auto"},
+            {"9", "Burnout"}, {"10", "Resistance"},
+            {"11", "Red Faction"}, {"12", "BlazBlue"},
+            {"13", "Super Street Fighter"}, {"14", " Battlefield"}};
         System.out.println("Daftar DVD Game : ");
         System.out.print("\t+-----------------------------------------------+");
-        String[][] game = {{"\t|No.\t|", "\tJudul Game\t|"}, {"\t|1.\t|", "Guitar Hero 5\t|"},
-        {"\t|2.\t|", "\tGod of War\t|"}, {"\t|3.\t|", "Resident Evil 5\t|"},
-        {"\t|4.\t|", "\tFIFA Soccer\t|"}, {"\t|5.\t|", "DiRT \t|"},
-        {"\t|6.\t|", "\tAssassin’s\t|"}, {"\t|7.\t|", "Need for Speed\t|"},
-        {"\t|8.\t|", "\tCall of Duty\t|"}, {"\t|9.\t|", "Grand Theft Auto\t|"},
-        {"\t|10.\t|", "\tBurnout\t|"}, {"\t|11.\t|", "Resistance\t|"},
-        {"\t|12.\t|", "\tRed Faction\t|"}, {"\t|13.\t|", "BlazBlue\t|"},
-        {"\t|14.\t|", "\tSuper Street Fighter \t|"}, {"\t|15.\t|", " Battlefield\t|"},};
-        for (int i = 0; i <= 15; i++) {
-            for (int j = 0; j <= 1; j++) {
-                if (i == 0 && j == 1) {
-                    System.out.println(game[i][j] + " ");
-                    System.out.print("\t+-----------------------------------------------+");
-                } else {
-                    System.out.print(game[i][j] + " ");
-                }
-
+        System.out.println("\t|No.\t|\tJudul Game\t|\t|1.\t|Guitar Hero 5\t|");
+        System.out.print("\t+-----------------------------------------------+");
+        for (int i = 0; i < game.length; i++) {
+            for (int j = 0; j < game[0].length; j++) {
+                System.out.print(game[i][j] + "\t|");
             }
             System.out.println(" ");
 
         }
-        System.out.println("\t+-----------------------------------------------+");
+        System.out.println("\t+---------------------------------------------+");
+    }
+
+    public static void daftarFilm() {
+        String[][] film = {{},
+        {"1", "The Battleship Island", "Action"}, {"2", "Twilight Bracking Down", "Fantasy"},
+        {"3", "Spider-man Homecoming", "Laga"}, {"4", "Train to Busan", "Fantasy"},
+        {"5", "Pitch Perfect", "Music"}, {"6", "Beauty and the Beast", "Romance"},
+        {"7", "Star Wars", "Action"}, {"8", "Black Panther", "Action"},
+        {"9", "Maddah Danur 2", "Horror"}, {"10", "Incidius 3", "Horror"}
+        };
+        
+        System.out.println("Daftar DVD Film :");
+                System.out.println("\t+-----------------------------------------------+");
+                System.out.println("\tNo.\t|\tJudul Film\t|\tGenre\t\t|\t|1.\t|Avengers Invinity War\t|Action\t|");
+                System.out.println("\t+-----------------------------------------------+");
+                for (int i = 0; i < film.length; i++) {
+                    for (int j = 0; j < film[0].length; j++) {
+                        System.out.println(film[i][j] + "\t|");
+                    }
+                    System.out.println(" ");
+                }
+                System.out.println("\t+-----------------------------------------------+");
     }
 
     public static void daftarDrama() {
-        System.out.println("Daftar DVD Serial Drama Asia :");
-        System.out.println("\t+-----------------------------------------------+");
-        String[][] drama = {{"\t|No.\t|", "\tJudul Drama\t|", "Genre\t\t|"}, {"\t|1.\t|", "Two Cops\t\t|", "Fantasy\t|"},
-        {"\t|2.\t|", "Descendant of the Sun\t|", "Romance\t|"}, {"\t|3.\t|", "Let's Fight Ghosh\t|", "Mistery\t|"},
-        {"\t|4.\t|", "Itakiss 2 in Okinawa\t|", "Romance\t|"}, {"\t|5.\t|", "Goblin\t\t|", "Fantasy\t|"}
+        String[][] drama = {{"1", "Two Cops", "Fantasy"},
+        {"2", "Descendant of the Sun", "Romance"}, {"3", "Let's Fight Ghosh", "Mistery"},
+        {"4", "Itakiss 2 in Okinawa", "Romance"}, {"5", "Goblin", "Fantasy"}
 
         };
-        for (int i = 0; i <= 5; i++) {
-            for (int j = 0; j <= 2; j++) {
-                if (i == 0 && j == 2) {
-                    System.out.println(drama[i][j] + " ");
-                    System.out.print("\t+-----------------------------------------------+");
-                } else {
-                    System.out.print(drama[i][j] + " ");
-                }
+        System.out.println("Daftar DVD Serial Drama Asia :");
+                System.out.println("\t+-----------------------------------------------+");
+                System.out.println("\t|No.\t|\tJudul Drama\t|\tGenre\t\t|");
 
-            }
-            System.out.println(" ");
-        }
-        System.out.println("\t+-----------------------------------------------+");
+                for (int i = 0; i < drama.length; i++) {
+                    for (int j = 0; j < drama[0].length; j++) {
+                        System.out.println(drama[i][j] + "\t|");
+
+                    }
+                    System.out.println(" ");
+                }
+                System.out.println("\t+-----------------------------------------------+");
     }
 
 }
