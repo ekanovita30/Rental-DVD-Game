@@ -21,7 +21,7 @@ public class Aplikasi {
 
         System.out.println("\t  ----------------EAGLE ZONE RENTAL-------------------");
         System.out.println("PENYEWAAN DVD FILM , SERIAL DRAMA ASIA (KOREA, JEPANG DAN THAILAND) DAN GAME");
-        System.out.println("============================================================================");
+        //System.out.println("============================================================================");
         System.out.println("Pilihan Peminjaman DVD");
         System.out.println("\t1. Daftar DVD Game");
         System.out.println("\t2. Daftar DVD Film");
