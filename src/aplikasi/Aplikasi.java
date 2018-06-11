@@ -31,6 +31,7 @@ public class Aplikasi {
         {"7", "Call of Duty"}, {"8", "Grand Theft Auto"},
         {"9", "Burnout"}, {"10", "Resistance"},
         {"11", "Red Faction"}, {"12", "BlazBlue"},
+<<<<<<< HEAD
         {"13", "Super Street Fighter"}, {"14", "Battlefield"}, {"15", "Guitar Hero 5"}};
     static String[][] kasir = new String[99][99];
 
@@ -39,6 +40,18 @@ public class Aplikasi {
         String nama = "";
         String daftar;
         char opsi, opsi1;
+=======
+        {"13", "Street Fighter"}, {"14", "Battlefield"}, {"15", "Guitar Hero 5"}};
+    static String daftar_pinjam[] = new String[15];
+    static String[][] kasir = new String[99][99];
+
+    public static void main(String[] args) {
+        int pilih, jumlah =0, trans, hari, bulan, tahun, denda, telat_hari,
+                kembalian_denda, bayar_denda;
+        String nama = "";
+        String daftar;
+        char opsi, opsi1, telat;
+>>>>>>> 55056f26142e070b65127cb4a6864bafe12a6f19
         Scanner input = new Scanner(System.in); //untuk input data integer(bilangan)
         Scanner str = new Scanner(System.in);   //untuk input data string
 
@@ -83,9 +96,16 @@ public class Aplikasi {
                                 for (int a = 1; a <= jumlah; a++) {
                                     System.out.print("Masukkan nomor pilihan : ");
                                     daftar = str.next();
+<<<<<<< HEAD
                                     for (int i = 0; i < game.length; i++) {
                                         if (daftar.equalsIgnoreCase(game[i][0])) {
                                             System.out.println("nama Game : " + game[i][1]);
+=======
+                                    for (int i = 0; i < film.length; i++) {
+                                        if (daftar.equalsIgnoreCase(game[i][0])) {
+                                            daftar_pinjam[i] = game[i][1];
+                                            System.out.println("nama film : " + game[i][1]);
+>>>>>>> 55056f26142e070b65127cb4a6864bafe12a6f19
                                         }
                                     }
                                 }
@@ -111,7 +131,12 @@ public class Aplikasi {
                                     daftar = str.next();
                                     for (int i = 0; i < film.length; i++) {
                                         if (daftar.equalsIgnoreCase(film[i][0])) {
+<<<<<<< HEAD
                                             System.out.println("Judul Film : " + film[i][1]);
+=======
+                                            daftar_pinjam[i] = film[i][1];
+                                            System.out.println("nama film : " + film[i][1]);
+>>>>>>> 55056f26142e070b65127cb4a6864bafe12a6f19
                                         }
                                     }
                                 }
@@ -137,6 +162,10 @@ public class Aplikasi {
                                     daftar = str.next();
                                     for (int i = 0; i < drama.length; i++) {
                                         if (daftar.equalsIgnoreCase(drama[i][0])) {
+<<<<<<< HEAD
+=======
+                                            daftar_pinjam[i] = drama[i][1];
+>>>>>>> 55056f26142e070b65127cb4a6864bafe12a6f19
                                             System.out.println("nama Game : " + drama[i][1]);
                                         }
                                     }
@@ -150,7 +179,30 @@ public class Aplikasi {
                     } while (opsi1 == 'y' || opsi1 == 'Y');
                     break;
                 case 2:
+<<<<<<< HEAD
                     System.out.println("data belum terisi");
+=======
+                    for (int i = 0; i < jumlah; i++) {
+                        System.out.println(daftar_pinjam[i]);
+                    }
+                    System.out.println("Apakah pengembalian terlamat ?");
+                    telat = input.next().charAt(0);
+                    if(telat == 'y' || telat == 'Y'){
+                        System.out.println("Berapa hari : ");
+                        telat_hari = input.nextInt();
+                        denda = telat_hari*2000;
+                        System.out.print("Denda : "+denda);
+                        System.out.println("");
+                        System.out.print("Bayar : ");
+                        bayar_denda = input.nextInt();
+                        kembalian_denda = bayar_denda-denda;
+                        System.out.println("Kembalian : "+kembalian_denda);
+                        System.out.println("Terimakasih");
+                    }else{
+                        System.out.println("Terimakasih");
+                    }
+                    
+>>>>>>> 55056f26142e070b65127cb4a6864bafe12a6f19
                     break;
             }
             System.out.print("Apakah anda ingin melakukan layanan kembali (y/n) ? ");
