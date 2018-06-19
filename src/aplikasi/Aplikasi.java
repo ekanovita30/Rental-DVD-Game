@@ -31,27 +31,21 @@ public class Aplikasi {
         {"7", "Call of Duty"}, {"8", "Grand Theft Auto"},
         {"9", "Burnout"}, {"10", "Resistance"},
         {"11", "Red Faction"}, {"12", "BlazBlue"},
-<<<<<<< HEAD
         {"13", "Super Street Fighter"}, {"14", "Battlefield"}, {"15", "Guitar Hero 5"}};
-    static String[][] kasir = new String[99][99];
-
+    static String [] daftar_pinjam = new String[30];
+    static int jumlah_total;
+    static int jumlah1,jumlah2,jumlah3;
     public static void main(String[] args) {
-        int pilih, jumlah, trans, hari, bulan, tahun;
-        String nama = "";
-        String daftar;
-        char opsi, opsi1;
-=======
-        {"13", "Street Fighter"}, {"14", "Battlefield"}, {"15", "Guitar Hero 5"}};
-    static String daftar_pinjam[] = new String[15];
-    static String[][] kasir = new String[99][99];
-
-    public static void main(String[] args) {
-        int pilih, jumlah =0, trans, hari, bulan, tahun, denda, telat_hari,
-                kembalian_denda, bayar_denda;
-        String nama = "";
+        int pilih, trans, denda, telat_hari,h = 0,
+                kembalian_denda, bayar_denda, uang;
+        int[] harga = {12000,15000,16000};
+        int[] k = new int [10];
+//        int [] harga1 = new int[30];
+//        int [] harga2 = new int [30];
+        
+        String nama = "";  
         String daftar;
         char opsi, opsi1, telat;
->>>>>>> 55056f26142e070b65127cb4a6864bafe12a6f19
         Scanner input = new Scanner(System.in); //untuk input data integer(bilangan)
         Scanner str = new Scanner(System.in);   //untuk input data string
 
@@ -81,128 +75,120 @@ public class Aplikasi {
                             case 1:
                                 daftarGame();
                                 System.out.println("penyewaan maksimal 3 hari");
-                                System.out.println("Harga untuk semua DVD Game adalah Rp 15.000,00");
-                                System.out.println("Masukkan Tanggal Peminjaman (Isi data dengan format angka) : ");
-                                System.out.print("\tHari : ");
-                                hari = input.nextInt();
-                                System.out.print("\tBulan : ");
-                                bulan = input.nextInt();
-                                System.out.print("\tTahun : ");
-                                tahun = input.nextInt();
+                                System.out.println("Harga untuk semua DVD Game adalah Rp 16.000,00");
                                 System.out.print("Masukkan jumlah pinjam : ");
-                                jumlah = input.nextInt();
-                                System.out.print("Masukkan Nama : ");
-                                nama = str.next();
-                                for (int a = 1; a <= jumlah; a++) {
+                                jumlah1 = input.nextInt();
+                                for (int a = 0; a < jumlah1 ; a++) {
                                     System.out.print("Masukkan nomor pilihan : ");
                                     daftar = str.next();
-<<<<<<< HEAD
                                     for (int i = 0; i < game.length; i++) {
                                         if (daftar.equalsIgnoreCase(game[i][0])) {
                                             System.out.println("nama Game : " + game[i][1]);
-=======
-                                    for (int i = 0; i < film.length; i++) {
-                                        if (daftar.equalsIgnoreCase(game[i][0])) {
-                                            daftar_pinjam[i] = game[i][1];
-                                            System.out.println("nama film : " + game[i][1]);
->>>>>>> 55056f26142e070b65127cb4a6864bafe12a6f19
+                                            for(int j = 0; j < daftar_pinjam.length; j ++){
+                                                daftar_pinjam[j] = game[i][1];
+                                            }
                                         }
                                     }
                                 }
-                                System.out.println("Jumlah Harga : " + (15000 * jumlah));
+////                                System.out.print("Masukkan Nama : ");
+//                                nama = str.next();
+
+                                for (int i = 0; i < k.length; i++) {
+                                    k[i] = harga[2] * jumlah1;
+                                }
+                                System.out.println(k);
                                 break;
                             case 2:
                                 daftarFilm();
                                 System.out.println("penyewaan maksimal 3 hari");
                                 System.out.println("Harga untuk semua DVD Film adalah Rp 12.000,00");
-                                 System.out.println("Masukkan Tanggal Peminjaman (Isi data dengan format angka) : ");
-                                System.out.print("\tHari\t: ");
-                                hari = input.nextInt();
-                                System.out.print("\tBulan\t: ");
-                                bulan = input.nextInt();
-                                System.out.print("\tTahun\t: ");
-                                tahun = input.nextInt();
                                 System.out.print("Masukkan jumlah pinjam : ");
-                                jumlah = input.nextInt();
-                                System.out.print("Masukkan Nama : ");
-                                nama = str.next();
-                                for (int a = 1; a <= jumlah; a++) {
+                                jumlah2 = input.nextInt();
+                                for (int a = 0; a < jumlah2 ; a++) {
                                     System.out.print("Masukkan nomor pilihan : ");
                                     daftar = str.next();
                                     for (int i = 0; i < film.length; i++) {
                                         if (daftar.equalsIgnoreCase(film[i][0])) {
-<<<<<<< HEAD
-                                            System.out.println("Judul Film : " + film[i][1]);
-=======
-                                            daftar_pinjam[i] = film[i][1];
-                                            System.out.println("nama film : " + film[i][1]);
->>>>>>> 55056f26142e070b65127cb4a6864bafe12a6f19
+                                            System.out.println("nama Film : " + film[i][1]);
+                                            for(int j = 0; j < daftar_pinjam.length; j ++){
+                                                daftar_pinjam[j] = film[i][1];
+                                            }
                                         }
                                     }
                                 }
-                                System.out.println("Jumlah Harga : " + (12000 * jumlah));
+                                for (int i = 0; i < k.length; i++) {
+                                    k[i] = harga[0] * jumlah2;
+                                }
+                                System.out.println(k);
                                 break;
                             case 3:
                                 daftarDrama();
                                 System.out.println("penyewaan maksimal 3 hari");
                                 System.out.println("Harga untuk semua DVD Drama adalah Rp 15.000,00");
-                                System.out.println("Masukkan Tanggal Peminjaman (Isi data dengan format angka) : ");
-                                System.out.print("\tHari : ");
-                                hari = input.nextInt();
-                                System.out.print("\tBulan : ");
-                                bulan = input.nextInt();
-                                System.out.print("\tTahun : ");
-                                tahun = input.nextInt();
                                 System.out.print("Masukkan jumlah pinjam : ");
-                                jumlah = input.nextInt();
-                                System.out.print("Masukkan Nama : ");
-                                nama = str.next();
-                                for (int a = 1; a <= jumlah; a++) {
+                                jumlah3 = input.nextInt();
+////                                System.out.print("Masukkan Nama : ");
+//                                nama = str.next();
+                                for (int a = 0; a < jumlah3 ; a++) {
                                     System.out.print("Masukkan nomor pilihan : ");
                                     daftar = str.next();
                                     for (int i = 0; i < drama.length; i++) {
                                         if (daftar.equalsIgnoreCase(drama[i][0])) {
-<<<<<<< HEAD
-=======
-                                            daftar_pinjam[i] = drama[i][1];
->>>>>>> 55056f26142e070b65127cb4a6864bafe12a6f19
-                                            System.out.println("nama Game : " + drama[i][1]);
+                                            System.out.println("nama drama : " + drama[i][1]);
+                                            for(int j = 0; j < daftar_pinjam.length; j ++){
+                                                daftar_pinjam[j] = drama[i][1];
+                                            }
                                         }
                                     }
                                 }
-                                System.out.println("Jumlah harga : " + (15000 * jumlah));
+                                for (int i = 0; i < k.length; i++) {
+                                    k [i] = harga[1] * jumlah3;
+                                }
+                                System.out.println(k);
                                 break;
 
                         }
                         System.out.print("Apakah anda ingin memilih jenis DVD lagi ? ");
                         opsi1 = str.next().charAt(0);
                     } while (opsi1 == 'y' || opsi1 == 'Y');
+                    //laporan transaksi
+                    System.out.println("===============================");
+                    System.out.println("List Judul DVD/Game yang disewa\t: ");
+                    System.out.println("-------------------------------");
+                    jumlah_total = jumlah1 + jumlah2 + jumlah3;
+                    System.out.println(jumlah_total);
+                    for (int i = 0; i < jumlah_total ; i++) {
+                        System.out.println(daftar_pinjam[i]);
+                    }
+                    System.out.print("total harga\t:");
+                    for (int i = 0; i < k.length; i++) {
+                        h = h + k[i];
+                    }
+                    System.out.println(h);
+                    System.out.print("Uang Pembayaran\t: ");
+                    uang = input.nextInt();
+                    System.out.println("Uang Kembalian\t: " + (uang - h));
                     break;
                 case 2:
-<<<<<<< HEAD
-                    System.out.println("data belum terisi");
-=======
-                    for (int i = 0; i < jumlah; i++) {
+                    for (int i = 0; i < jumlah_total; i++) {
                         System.out.println(daftar_pinjam[i]);
                     }
                     System.out.println("Apakah pengembalian terlamat ?");
                     telat = input.next().charAt(0);
-                    if(telat == 'y' || telat == 'Y'){
+                    if (telat == 'y' || telat == 'Y') {
                         System.out.println("Berapa hari : ");
                         telat_hari = input.nextInt();
-                        denda = telat_hari*2000;
-                        System.out.print("Denda : "+denda);
+                        denda = telat_hari * 2000;
+                        System.out.print("Denda : " + denda);
                         System.out.println("");
                         System.out.print("Bayar : ");
                         bayar_denda = input.nextInt();
-                        kembalian_denda = bayar_denda-denda;
-                        System.out.println("Kembalian : "+kembalian_denda);
+                        kembalian_denda = bayar_denda - denda;
+                        System.out.println("Kembalian : " + kembalian_denda);
                         System.out.println("Terimakasih");
-                    }else{
+                    } else {
                         System.out.println("Terimakasih");
                     }
-                    
->>>>>>> 55056f26142e070b65127cb4a6864bafe12a6f19
                     break;
             }
             System.out.print("Apakah anda ingin melakukan layanan kembali (y/n) ? ");
