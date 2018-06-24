@@ -1,0 +1,13 @@
+	-------------------------------------------------------|
+	|Nama Peminjam : dewi
+	|Tanggal Peminjaman : 24-08-2018
+	|------------------------------------------------------|
+	|judul DVD/Game		jenis DVD Pinjam	Harga
+	|Itakiss 2 in Okinawa		3	15000
+	|Incidius 3		2	12000
+	|------------------------------------------------------|
+	|total harga		:27000
+	|Uang Pembayaran	: 30000
+	|Uang Kembalian	: 3000
+	|Tanggal Pengembalian :28-09-2018
+	-------------------------------------------------------|

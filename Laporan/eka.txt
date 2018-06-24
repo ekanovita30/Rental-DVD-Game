@@ -1,0 +1,13 @@
+	-------------------------------------------------------|
+	|Nama Peminjam : eka
+	|Tanggal Peminjaman : 08-11-2018
+	|------------------------------------------------------|
+	|judul DVD/Game		jenis DVD Pinjam	Harga
+	|Itakiss 2 in Okinawa		3	15000
+	|Street Fighter		1	16000
+	|------------------------------------------------------|
+	|total harga		:31000
+	|Uang Pembayaran	: 35000
+	|Uang Kembalian	: 4000
+	|Tanggal Pengembalian :0014-05-14
+	-------------------------------------------------------|

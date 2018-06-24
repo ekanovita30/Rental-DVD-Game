@@ -1,0 +1,12 @@
+	-------------------------------------------------------|
+	|Nama Peminjam : weni
+	|Tanggal Peminjaman : 08-12-2018
+	|------------------------------------------------------|
+	|judul DVD/Game		jenis DVD Pinjam	Harga
+	|Itakiss 2 in Okinawa		3	15000
+	|------------------------------------------------------|
+	|total harga		:15000
+	|Uang Pembayaran	: 20000
+	|Uang Kembalian	: 5000
+	|Tanggal Pengembalian :0014-06-13
+	-------------------------------------------------------|
