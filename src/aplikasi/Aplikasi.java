@@ -7,7 +7,7 @@ package aplikasi;
 
 /**
  *
- * @author Asus
+ * @author hendy
  */
 import java.util.Scanner;
 
@@ -72,12 +72,12 @@ public class Aplikasi {
                                 System.out.println("penyewaan maksimal 3 hari");
                                 System.out.println("Harga untuk semua DVD Game adalah Rp 15.000,00");
                                 System.out.println("Masukkan Tanggal Peminjaman (Isi data dengan format angka) : ");
-                                System.out.print("\tHari : ");
-                                hari = input.nextInt();
-                                System.out.print("\tBulan : ");
-                                bulan = input.nextInt();
-                                System.out.print("\tTahun : ");
-                                tahun = input.nextInt();
+//                                System.out.print("\tHari : ");
+//                                hari = input.nextInt();
+//                                System.out.print("\tBulan : ");
+//                                bulan = input.nextInt();
+//                                System.out.print("\tTahun : ");
+//                                tahun = input.nextInt();
                                 System.out.print("Masukkan jumlah pinjam : ");
                                 jumlah = input.nextInt();
                                 System.out.print("Masukkan Nama : ");
@@ -98,13 +98,13 @@ public class Aplikasi {
                                 daftarFilm();
                                 System.out.println("penyewaan maksimal 3 hari");
                                 System.out.println("Harga untuk semua DVD Film adalah Rp 12.000,00");
-                                 System.out.println("Masukkan Tanggal Peminjaman (Isi data dengan format angka) : ");
-                                System.out.print("\tHari\t: ");
-                                hari = input.nextInt();
-                                System.out.print("\tBulan\t: ");
-                                bulan = input.nextInt();
-                                System.out.print("\tTahun\t: ");
-                                tahun = input.nextInt();
+//                                 System.out.println("Masukkan Tanggal Peminjaman (Isi data dengan format angka) : ");
+//                                System.out.print("\tHari\t: ");
+//                                hari = input.nextInt();
+//                                System.out.print("\tBulan\t: ");
+//                                bulan = input.nextInt();
+//                                System.out.print("\tTahun\t: ");
+//                                tahun = input.nextInt();
                                 System.out.print("Masukkan jumlah pinjam : ");
                                 jumlah = input.nextInt();
                                 System.out.print("Masukkan Nama : ");
@@ -125,13 +125,13 @@ public class Aplikasi {
                                 daftarDrama();
                                 System.out.println("penyewaan maksimal 3 hari");
                                 System.out.println("Harga untuk semua DVD Drama adalah Rp 15.000,00");
-                                System.out.println("Masukkan Tanggal Peminjaman (Isi data dengan format angka) : ");
-                                System.out.print("\tHari : ");
-                                hari = input.nextInt();
-                                System.out.print("\tBulan : ");
-                                bulan = input.nextInt();
-                                System.out.print("\tTahun : ");
-                                tahun = input.nextInt();
+//                                System.out.println("Masukkan Tanggal Peminjaman (Isi data dengan format angka) : ");
+//                                System.out.print("\tHari : ");
+//                                hari = input.nextInt();
+//                                System.out.print("\tBulan : ");
+//                                bulan = input.nextInt();
+//                                System.out.print("\tTahun : ");
+//                                tahun = input.nextInt();
                                 System.out.print("Masukkan jumlah pinjam : ");
                                 jumlah = input.nextInt();
                                 System.out.print("Masukkan Nama : ");
@@ -185,11 +185,11 @@ public class Aplikasi {
     public static void daftarGame() {
         System.out.println("Daftar DVD Game : ");
         System.out.println("\t+---------------------------------------+");
-        System.out.println("\tNo.\t|\tJudul Game\t|");
+        System.out.printf("\t%2s%2s%20s","|","No.","|Nama Game","|");
         System.out.println("\t+---------------------------------------+");
         for (int i = 0; i < game.length; i++) {
             for (int j = 0; j < game[0].length; j++) {
-                System.out.print("\t" + game[i][j] + "\t|");
+                System.out.printf("\t|%2s" + game[i][0] + "%2s|%2s" + game[i][1] + "%10s|");
             }
             System.out.println(" ");
 
@@ -217,7 +217,7 @@ public class Aplikasi {
         System.out.println("\tNo.\t|\tJudul Drama\t|\tGenre\t\t|");
 
         for (int i = 0; i < drama.length; i++) {
-            for (int j = 0; j < drama[0].length; j++) {
+            for(int j = 0; j < drama[0].length; j++) {
                 System.out.print("\t|" + drama[i][j] + "\t|");
             }
             System.out.println(" ");
