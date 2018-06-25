@@ -1,0 +1,13 @@
+	-------------------------------------------------------|
+	|Nama Peminjam : hendyy
+	|Tanggal Peminjaman : 12-09-2018
+	|------------------------------------------------------|
+	|judul DVD/Game		jenis DVD Pinjam	Harga
+	|Insidius 3		2	12000
+	|Let's Fight Ghosh		3	15000
+	|------------------------------------------------------|
+	|total harga		: Rp 27000,00			|
+	|Uang Pembayaran	: Rp 30000,00			|
+	|Uang Kembalian		: Rp 3000,00			|
+	|Tanggal Pengembalian	: 15-09-2018		|
+	-------------------------------------------------------|

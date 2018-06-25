@@ -15,28 +15,29 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 //try catch
 import java.text.ParseException;
+import java.io.IOException;
 import java.io.*;
 import java.nio.file.*;
 
-public class Aplikasi {
+public class aplikasi {
 
     static String[][] film = {
-        {"1", "The Battleship Island", "Action"}, {"2", "Twilight Bracking Down", "Fantasy"},
-        {"3", "Spider-man Homecoming", "Laga"}, {"4", "Train to Busan", "Fantasy"},
-        {"5", "Pitch Perfect", "Music"}, {"6", "Beauty and the Beast", "Romance"},
+        {"1", "karate kids", "Action"}, {"2", "Twilight ", "Fantasy"},
+        {"3", "Spider-man ", "Laga"}, {"4", "Train to Busan", "Fantasy"},
+        {"5", "Pitch Perfect", "Music"}, {"6", "anaconda", "Romance"},
         {"7", "Star Wars", "Action"}, {"8", "Black Panther", "Action"},
-        {"9", "Maddah Danur 2", "Horror"}, {"10", "Insidius 3", "Horror"}, {"11", "Avengers Invinity War", "Action"}
+        {"9", "Maddah Danur 2", "Horror"}, {"10", "Insidius 3", "Horror"}, {"11", "Avengers ", "Action"}
     };
     static String[][] drama = {
-        {"1", "Two Cops", "Fantasy"}, {"2", "Descendant of the Sun", "Romance"}, {"3", "Let's Fight Ghosh", "Mistery"},
-        {"4", "Itakiss 2 in Okinawa", "Romance"}, {"5", "Goblin", "Fantasy"}
+        {"1", "Lady With Class", "Romance"}, {"2", "Descendant of the Sun", "Romance"}, {"3", "Let's Fight Ghosh", "Mistery"},
+        {"4", "Itakiss 2 in Okinawa", "Romance"}, {"5", "Tomorrow With You", "Fantasy"}
     };
     static String[][] game = {
         {"1", "God of War"}, {"2", "Resident Evil 5"},
-        {"3", "FIFA Soccer"}, {"4", "DiRT"},
+        {"3", "FIFA Soccer"}, {"4", "Mortal Combat"},
         {"5", "Assassin’s"}, {"6", "Need for Speed"},
-        {"7", "Call of Duty"}, {"8", "Grand Theft Auto"},
-        {"9", "Burnout"}, {"10", "Resistance"},
+        {"7", "Call of Duty"}, {"8", "PES 2018"},
+        {"9", "NBA 2018"}, {"10", "Resistance"},
         {"11", "Red Faction"}, {"12", "BlazBlue"},
         {"13", "Street Fighter"}, {"14", "Battlefield"}, {"15", "Guitar Hero 5"}};
     static String daftar_pinjam[] = new String[99];
@@ -219,7 +220,7 @@ public class Aplikasi {
     public static void daftarDrama() {
         System.out.println("Daftar DVD Serial Drama Asia :");
         System.out.println("\t+-----------------------------------------------+");
-        System.out.println("\tNo.\t|\tJudul Drama\t|\tGenre\t\t|");
+        System.out.println("\tNo.\t|\tJudul Drama\t\t|\tGenre\t\t|");
 
         for (int i = 0; i < drama.length; i++) {
             for (int j = 0; j < drama[0].length; j++) {
@@ -263,7 +264,7 @@ public class Aplikasi {
     //menyimpan struk
     public static void SaveLaporan(String nama, int uang) {
         try {
-            File file = new File("E:\\materi dan tugas\\SEMESTER 2 TI\\PRAKTIKUM PEMROGRAMAN DASAR 1\\aplikasi\\Laporan\\" + nama + ".txt");
+            File file = new File(nama + ".txt");
             boolean s = file.createNewFile();
             if (s) {
                 System.out.println("Struk Berhasil Disimpan");
@@ -271,24 +272,24 @@ public class Aplikasi {
                 System.out.println("file sudah ada");
             }
             PrintWriter y = new PrintWriter(file);
-            y.println("\t-------------------------------------------------------|");
+            y.println("\t|-------------------------------------------------------|");
             y.println("\t|Nama Peminjam : " + nama);
             y.println("\t|Tanggal Peminjaman : " + oldDate);
-            y.println("\t|------------------------------------------------------|");
+            y.println("\t|-------------------------------------------------------|");
             y.println("\t|judul DVD/Game\t\tjenis DVD Pinjam\tHarga");
             for (int i = 0; i < daftar_pinjam.length; i++) {
                 if (daftar_pinjam[i] != null) {
-                    y.println("\t|" + daftar_pinjam[i] + "\t\t" + kasir[i][0] + "\t" + kasir[i][1]);
+                    y.println("\t|" + daftar_pinjam[i] + "\t\t" + kasir[i][0] + "\t\t\t" + kasir[i][1]);
                 } else {
                     break;
                 }
             }
-            y.println("\t|------------------------------------------------------|");
+            y.println("\t|-------------------------------------------------------|");
             y.println("\t|total harga\t\t: Rp " + hitungTotal() + ",00\t\t\t|");
             y.println("\t|Uang Pembayaran\t: Rp " + uang + ",00\t\t\t|");
             y.println("\t|Uang Kembalian\t\t: Rp " + (uang - hitungTotal()) + ",00\t\t\t|");
-            y.println("\t|Tanggal Pengembalian\t: " + DateOut(oldDate) + "\t\t|");
-            y.println("\t-------------------------------------------------------|");
+            y.println("\t|Tanggal Pengembalian\t: " + DateOut(oldDate) + "\t\t\t|");
+            y.println("\t|-------------------------------------------------------|");
             y.close();
         } catch (IOException e) {
             System.out.println("kesalahan terjadi:");
@@ -299,7 +300,7 @@ public class Aplikasi {
     //tampilkan laporan
     public static void TampilLaporan(String name) throws FileNotFoundException {
         File file
-                = new File("E:\\materi dan tugas\\SEMESTER 2 TI\\PRAKTIKUM PEMROGRAMAN DASAR 1\\aplikasi\\Laporan\\" + name + ".txt");
+                = new File(name + ".txt");
         Scanner tampil = new Scanner(file);
 
         while (tampil.hasNextLine()) {
@@ -309,7 +310,7 @@ public class Aplikasi {
 
     //menghapus struk
     public static void HapusLaporan(String nama) {
-        File file = new File("E:\\materi dan tugas\\SEMESTER 2 TI\\PRAKTIKUM PEMROGRAMAN DASAR 1\\aplikasi\\Laporan\\" + nama + ".txt");
+        File file = new File(nama + ".txt");
         file.delete();
         if (!file.delete()) {
             System.out.println("Could not delete file");
