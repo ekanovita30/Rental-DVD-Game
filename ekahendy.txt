@@ -1,0 +1,12 @@
+	|-------------------------------------------------------|
+	|Nama Peminjam : ekahendy
+	|Tanggal Peminjaman : 25-04-2018
+	|-------------------------------------------------------|
+	|judul DVD/Game		jenis DVD Pinjam	Harga
+	|Need for Speed		1		16000
+	|-------------------------------------------------------|
+	|total harga		: Rp 16000,00			|
+	|Uang Pembayaran	: Rp 20000,00			|
+	|Uang Kembalian		: Rp 4000,00			|
+	|Tanggal Pengembalian	: 28-04-2018			|
+	|-------------------------------------------------------|
